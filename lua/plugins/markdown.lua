@@ -3,6 +3,13 @@ return {
   {
     "MeanderingProgrammer/render-markdown.nvim",
     ft = { "markdown", "quarto" },
+    opts = {
+      checkbox = {
+        enabled = true,
+        checked = { icon = "✔ " },
+        custom = { todo = { rendered = "◯ " } },
+      },
+    },
   },
 
   {
@@ -14,7 +21,7 @@ return {
       vim.g.mkdp_filetypes = { "markdown" }
     end,
     config = function()
-      vim.g.mkdp_auto_close = false
+      vim.g.mkdp_auto_close = true
       vim.g.mkdp_refresh_slow = 1
       vim.g.mkdp_open_to_the_world = false
       vim.g.mkdp_open_ip = "127.0.0.1"
