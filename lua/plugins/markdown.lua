@@ -3,13 +3,20 @@ return {
   {
     "MeanderingProgrammer/render-markdown.nvim",
     ft = { "markdown", "quarto" },
-    opts = {
-      checkbox = {
+    opts = function(_, opts)
+      opts.render_modes = { "n", "c", "t" }
+      opts.checkbox = {
         enabled = true,
         checked = { icon = "✔ " },
         custom = { todo = { rendered = "◯ " } },
-      },
-    },
+      }
+      opts.code = {
+        style = "full",
+        sign = "true",
+        width = "block",
+        right_pad = 1,
+      }
+    end,
   },
 
   {
