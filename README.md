@@ -5,14 +5,18 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 
 ## NP Release Notes
 
+Based on the basic Neovim setup, and then heavily inspired by
+   <https://github.com/jmbuhr/quarto-nvim-kickstarter>
+
 ## Known Issues
 
 - Could not get code completion for Julia working inside Quarto and markdown documents. The Julia Language Server
   kept crashing. Will not keep trying here. Not worth it.
-- QuartoPreview is not particularly robust. I will use the command line version for now.
+- QuartoPreview is not particularly robust based on how I have set things up.. I will use the command line version for now.
 
 ### Initial Setup
 
+- vim-slime
 - language servers for Julia running
 - tree-sitter more languages
 - markdown
