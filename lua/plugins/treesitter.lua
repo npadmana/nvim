@@ -1,36 +1,15 @@
 return {
+  --- Directly copied from the lazy documentation
+  --- Does not repeat the entire setup
   {
     "nvim-treesitter/nvim-treesitter",
-    opts = {
-      ensure_installed = {
-        "bash",
+    opts = function(_, opts)
+      -- add tsx and treesitter
+      vim.list_extend(opts.ensure_installed, {
         "bibtex",
-        "c",
-        "diff",
-        "html",
-        "javascript",
-        "jsdoc",
-        "json",
-        "jsonc",
         "julia",
         "latex",
-        "lua",
-        "luadoc",
-        "luap",
-        "markdown",
-        "markdown_inline",
-        "printf",
-        "python",
-        "query",
-        "regex",
-        "toml",
-        "tsx",
-        "typescript",
-        "vim",
-        "vimdoc",
-        "xml",
-        "yaml",
-      },
-    },
+      })
+    end,
   },
 }
