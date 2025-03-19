@@ -51,7 +51,42 @@ lines!(ax, seconds, exp.(seconds) .+ 7)
 f
 
 # %%
+CairoMakie.activate!()
 
+# %%
+save("plot.png", f)
+
+#----
+# If you want to serve these files, try the http-server 
+# installed as part of my CoCalc server setup
+# http-server . -a 127.0.0.1 -p 9099 
+
+# %%
+f = Figure()
+ax = Axis(f[1, 1],
+  title="Experimental data and exponential fit",
+  xlabel="Time (seconds)",
+  ylabel="Value",
+)
+scatter!(
+  ax,
+  seconds,
+  measurements,
+  color=:tomato,
+  label="Measurements"
+)
+lines!(
+  ax,
+  seconds,
+  exp.(seconds) .+ 7,
+  color=:tomato,
+  linestyle=:dash,
+  label="f(x) = exp(x) + 7",
+)
+axislegend(position=:rb)
+
+# %%
+save("plot.png", f)
 
 
 
