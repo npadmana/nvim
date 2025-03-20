@@ -6,6 +6,7 @@ return {
     keys = {
       { "<leader>rc", "<cmd>SlimeConfig<cr>", desc = "Slime Config" },
       { "<leader>rr", "<Plug>SlimeSendCell<BAR>/^# %%<CR>", desc = "Slime Send Cell" },
+      { "<leader>rr", ":<C-u>'<,'>SlimeSend<CR>", mode = "v", desc = "Slime Send Selection" },
     },
     config = function()
       vim.g.slime_target = "tmux"
