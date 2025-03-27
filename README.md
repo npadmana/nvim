@@ -14,6 +14,11 @@ Based on the basic Neovim setup, and then heavily inspired by
   kept crashing. Will not keep trying here. Not worth it.
 - QuartoPreview is not particularly robust based on how I have set things up.. I will use the command line version for now.
 
+### Snippets
+
+My snippets are a direct copy from [this blog](https://ejmastnak.com/tutorials/vim-latex/intro/) and their [dotfile repo](https://github.com/ejmastnak/dotfiles/blob/main/config/nvim/).
+To make the copy easier, I also created a `lua/personal` directory for the helper functions recommended.
+
 ### Initial Setup
 
 - vim-slime
