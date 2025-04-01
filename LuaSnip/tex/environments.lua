@@ -122,9 +122,9 @@ return {
     { trig = "all", snippetType = "autosnippet" },
     fmta(
       [[
-        \begin{align*}
+        \begin{align}
             <>
-        \end{align*}
+        \end{align}
       ]],
       {
         i(1),
